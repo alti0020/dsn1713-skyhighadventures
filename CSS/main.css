@@ -5,10 +5,17 @@
 body {
 	font-family: Roboto, bold;
 	color: #a4a9ac;
-	background-image: url('skydiving photo.png');
+}
+
+#Hero {
+	background-image: url('../Images/skydiving photo.png');
 	background-repeat: no-repeat;
-	background-attachment: fixed;
 	background-size: cover;
+	background-position: top;
+}
+
+#Hero .content-wrapper {
+	margin-top: -200px;
 }
 
 .navbar {
@@ -48,6 +55,13 @@ form {
 	justify-content: flex-end;
 }
 
+.mobile-btn {
+	width: fit-content;
+}
+.desktop-btn {
+	display: none;
+}
+
 button[type="submit"] {
 	text-indent: 100%;
 	overflow: hidden;
@@ -70,8 +84,14 @@ button[type="submit"] {
 } */
 
 /* Ipad */
-@media (max-width: 1200px) {
-
+@media (min-width: 992px) {
+	.mobile-btn {
+		display: none;
+	}
+	.desktop-btn {
+		display: block;
+		width: fit-content;
+	}
 }
 
 /* Phone */
